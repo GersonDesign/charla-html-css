@@ -3,70 +3,171 @@
   <head>
     <meta charset="utf-8">
     <title>Miau compras</title>
-    <!--SELECTORES == Etiquetas HTML, ID, CLASS -->
+    <style media="screen">
+    /**
+    Medidas Absolutas
+    - px
+    - pt
 
-    <style>
-      html, body{
-        margin: 0; /* margin es el margen ¨*/
-        padding: 0; /* margin es el relleno ¨*/
-      }
-      figure{
-        margin: 0;
-        padding:0;
-      }
+    Medidas Relativas
+    - em
+    - rem
+
+    Ejemplo de medida Relativa Rem
+
+    ->En el Rem, se trabaja con el tamaño de letra que se
+      ponga en la etiqueta body.
+
+    Si quiero obtener tamaño del font-size del body, en una clase de CSS
+    lo que haria es lo siguiente:
+    Primero, tengo que declara el body un tamaño de letra;
       body{
-        font-size:20px;
+        font-size: 16px;
       }
-      img{
-        max-width: 100%;
-      }
-      .container{
-        margin-right: auto;
-        margin-left: auto;
-        width: 1024px;
-      }
-      header{
-        padding-top: 20px;
-      }
-      header .container{
-        align-items:center;
-        display:flex;
-      }
-      header .container #logo,
-      header .container nav{
-        width: 50%;
-      }
-      header .container #logo img{
-        width: 300px;
-      }
-      header .container nav{
-        display:flex;
-        justify-content:space-around;
-      }
-      .section-a-content{
-        align-items:center;
-        display:flex;
-      }
-      .section-a-content article:nth-of-type(1) img{
-        width: 30px;
-      }
-      .section-b-list {
-        display:flex;
-      }
-      .section-b-list article{
-        width:200px;
-      }
-      .section-b-list article:nth-of-type(1) p{
-        color: purple;
-        font-size: 20px;
-      }
-      .section-b-list article:nth-of-type(4){
-        background:yellow;
-      }
-      .section-b-list article:nth-of-type(7){
-        background:red;
-      }
+    Luego, llamo a mi clase, para obtener el 16px del body, pongo lo sgte:
+     .mi-clase{
+      font-size:1rem; //Ese 1, es igual 16px, entonces si en mi clase quiero 32 pixeles, pondria 2rem
+    }
+    **/
 
+    /** Propiedades que no se explicaron en clase por falta de tiempo
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); // Se coloca una sombra
+      font-family: 'Montserrat', sans-serif; // Se usa definir una tipografia
+      font-weight: bold; // Coloca negrita a la letra
+      justify-content: center; // Se usa para centrar los elementos que usen la propiedad display:flex
+      text-decoration: none; // Retiro el subrayado que viene por defecto en las etiquetas A
+    **/
+
+    /** Importando la tipografia desde google **/
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Mulish:wght@400;700&display=swap');
+
+    html, body{
+      margin: 0; /** margin es el margen */
+      padding: 0; /** margin es el relleno **/
+    }
+    body{
+      font-family: 'Mulish', sans-serif;
+      font-size:16px;
+    }
+
+    figure{
+      margin: 0;
+      padding:0;
+    }
+
+    img{
+      max-width: 100%;
+    }
+    h1{
+      font-size: 4rem;
+      margin: 0;
+    }
+    h2{
+      font-size: 3rem;
+    }
+
+    h1,
+    h2{
+      color: #001A49;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .container{
+      margin-right: auto;
+      margin-left: auto;
+      width: 1024px;
+    }
+    header{
+      padding-top: 20px;
+    }
+    header .container{
+      align-items:center;
+      display:flex;
+    }
+    header .container #logo,
+    header .container nav{
+      width: 50%;
+    }
+    header .container #logo img{
+      width: 300px;
+    }
+    header .container nav{
+      display:flex;
+      justify-content:space-around;
+    }
+    header .container nav a{
+      color: #001A49;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 21px;
+      text-decoration: none;
+    }
+
+    .section-a-content{
+      align-items:center;
+      display:flex;
+    }
+    .section-a-content article{
+      width: 50%;
+    }
+    .section-a-content article a{
+      align-items: center;
+      background: #CD10FF;
+      border-radius: 50px;
+      color: white;
+      display: flex;
+      height: 50px;
+      font-weight: bold; /** Coloco negrita a la letra **/
+      font-size: 20px;
+      justify-content: center; /** Se usa para centrar los elementos que usen la propiedad display:flex **/
+      text-decoration: none; /** Retiro el subrayado que viene por defecto en las etiquetas A **/
+      width: 200px;
+    }
+    .section-a-content article p{
+      font-size: 21px;
+    }
+
+
+    .section-b h2{
+      text-align: center;
+    }
+    .section-b-list {
+      display:flex;
+      justify-content: space-between;
+      flex-wrap: wrap; /* Con esta propiedad algo que los elementos se ponga uno debajo del otro, ya que flex por alinea todo los elementos en una sola fila  */
+      margin-bottom: 70px;
+    }
+    .section-b-list article{
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      margin-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      width:210px;
+    }
+    .section-b-list article h3{
+      color: #9525F7;
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 7px;
+    }
+    .section-b-list article a{
+      align-items: center;
+      background: #191CFC;
+      border-radius: 33px;
+      color:white;
+      display: flex;
+      height: 50px;
+      font-size: 19px;
+      font-weight: bold;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+      width: 175px;
+    }
     </style>
   </head>
   <body>
@@ -105,67 +206,69 @@
             <div class="section-b-list">
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img1.png" alt="imagen 1">
                 </figure>
                 <p>Juguete para gatito que le ayuda en su crecimiento gatuno. </p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 1</h4>
-                <a href="#">Compras</a>
+                <h3>S/ 128.99</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img2.png" alt="imagen 2">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 2</h4>
-                <a href="#">Compras</a>
+                <p>Planta para que gatito le ayude a mejore su metabolismo.</p>
+                <h3>S/ 11.68</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img1.png" alt="imagen 1">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 3</h4>
-                <a href="#">Compras</a>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno. </p>
+                <h3>S/ 128.99</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img2.png" alt="imagen 2">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 4</h4>
-                <a href="#">Compras</a>
+                <p>Planta para que gatito le ayude a mejore su metabolismo.</p>
+                <h3>S/ 11.68</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img1.png" alt="imagen 1">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 5</h4>
-                <a href="#">Compras</a>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno. </p>
+                <h3>S/ 128.99</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img2.png" alt="imagen 2">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 6</h4>
-                <a href="#">Compras</a>
+                <p>Planta para que gatito le ayude a mejore su metabolismo.</p>
+                <h3>S/ 11.68</h3>
+                <a href="#">Comprar</a>
               </article>
               <article>
                 <figure>
-                  <img src="" alt="">
+                  <img src="/img/img1.png" alt="imagen 1">
                 </figure>
-                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
-                <h3>S/.128.99</h3>
-                <h4>TITULO 7</h4>
-                <a href="#">Compras</a>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno. </p>
+                <h3>S/ 128.99</h3>
+                <a href="#">Comprar</a>
               </article>
+              <article>
+                <figure>
+                  <img src="/img/img2.png" alt="imagen 2">
+                </figure>
+                <p>Planta para que gatito le ayude a mejore su metabolismo.</p>
+                <h3>S/ 11.68</h3>
+                <a href="#">Comprar</a>
+              </article>
+
             </div>
           </div>
         </section>
