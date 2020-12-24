@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Miau compras</title>
+    <!--SELECTORES == Etiquetas HTML, ID, CLASS -->
+
+    <style>
+      html, body{
+        margin: 0; /* margin es el margen ¨*/
+        padding: 0; /* margin es el relleno ¨*/
+      }
+      figure{
+        margin: 0;
+        padding:0;
+      }
+      body{
+        font-size:20px;
+      }
+      img{
+        max-width: 100%;
+      }
+      .container{
+        margin-right: auto;
+        margin-left: auto;
+        width: 1024px;
+      }
+      header{
+        padding-top: 20px;
+      }
+      header .container{
+        align-items:center;
+        display:flex;
+      }
+      header .container #logo,
+      header .container nav{
+        width: 50%;
+      }
+      header .container #logo img{
+        width: 300px;
+      }
+      header .container nav{
+        display:flex;
+        justify-content:space-around;
+      }
+      .section-a-content{
+        align-items:center;
+        display:flex;
+      }
+      .section-a-content article:nth-of-type(1) img{
+        width: 30px;
+      }
+      .section-b-list {
+        display:flex;
+      }
+      .section-b-list article{
+        width:200px;
+      }
+      .section-b-list article:nth-of-type(1) p{
+        color: purple;
+        font-size: 20px;
+      }
+      .section-b-list article:nth-of-type(4){
+        background:yellow;
+      }
+      .section-b-list article:nth-of-type(7){
+        background:red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <figure id="logo">
+          <img src="/img/logo.png" alt="logo de miau compras">
+        </figure>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+        <section class="section-a">
+          <div class="container">
+            <div class="section-a-content">
+              <article>
+                  <h1>Dale alegría a tu mascota</h1>
+                  <p>La plataforma que encontrarás la comida, accesorios,etc para tu engreido(a)</p>
+                  <a href="#">Comenzar</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="/img/banner.png" alt="imagen del banner">
+                </figure>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section-b">
+          <div class="container">
+            <h2>Nuestras ofertas por Navidad</h2>
+            <div class="section-b-list">
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno. </p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 1</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 2</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 3</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 4</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 5</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 6</h4>
+                <a href="#">Compras</a>
+              </article>
+              <article>
+                <figure>
+                  <img src="" alt="">
+                </figure>
+                <p>Juguete para gatito que le ayuda en su crecimiento gatuno.</p>
+                <h3>S/.128.99</h3>
+                <h4>TITULO 7</h4>
+                <a href="#">Compras</a>
+              </article>
+            </div>
+          </div>
+        </section>
+    </main>
+  </body>
+</html>
